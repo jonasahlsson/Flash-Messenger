@@ -1,0 +1,20 @@
+{
+    "name": "joah/flash-messenger",    
+    "type": "library",
+    "description": "A module sending flash messages",
+    "keywords": ["flash", "messages", "education"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jonas Ahlsson",
+            "email": "jonasahlsson@hotmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": { "Joah\\": "src/" }
+    }
+}
