@@ -1,7 +1,7 @@
-Flash messages
+Flash Messenger
 ==============
 
-This is a flash message module developed for use with Anax-MVC.
+A flash message module developed for use with Anax-MVC.
 
 * Point your browser to flash-quicktest.php for a first look.
 
@@ -15,7 +15,7 @@ Install
 To your composer.json add
 >
 >    "require": {
->        "FlashMessenger": ">=5.4"
+>        "FlashMessenger": "*"
 >    }
 >
 
@@ -42,7 +42,7 @@ sending messages via a session. Use whichever is suitable for your needs.
 
 ###Methods###
 Use *message()*, *error()*, *success()*, *notice()* or *warning()* to send messages. There are two arguments,
-first the required message and second an optinal html-class to accompany the message. 
+firstly the required message and secondly an optional html-class. 
 
 ###Instantiate###
 Without session
@@ -60,14 +60,14 @@ With session support
 >    return $sessionFlasher;
 >});
 
-###Send###
+###Send message###
 >$app->flashMessenger->success('Hello world!');
 >$app->flashMessenger->notice('Hola mundo!');
 >$app->flashMessenger->warning('Bonjour monde!');
 >$app->flashMessenger->error('Hallo Welt!');
->$app->flashMessenger->message('Hej världen!');
+>$app->flashMessenger->message('Hej världen!', 'xx-large-text');
 
-###Output###
+###Output message###
 Messages can be outputted using the *output()* method or using the return value 
 of the sending methods which all return an formatted message. 
 
@@ -86,9 +86,9 @@ Example using return value:
 >
 
 ###Style###
-There is a stylsheet with predefined styles flash.css in webroot/css. The methods 
-error(), success(), notice() and warning() all have default classes and accompanying 
-styles.
+There is a stylsheet webroot/css/flash.css with predefined styles. The methods 
+error(), success(), notice() and warning() all have default html class attributes. 
+The class attributes can be replaced using the optional class argument.
 
 > .flash-error {...}
 > .flash-success {...}

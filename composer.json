@@ -1,8 +1,8 @@
 {
     "name": "joah/flash-messenger",    
     "type": "library",
-    "description": "A module sending flash messages",
-    "keywords": ["flash", "messages", "education"],
+    "description": "Flash message module for Anax-MVC",
+    "keywords": ["flash", "messages", "Anax-MVC"],
     "license": "MIT",
     "authors": [
         {
