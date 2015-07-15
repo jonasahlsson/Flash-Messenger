@@ -11,14 +11,13 @@ $app->theme->setTitle("Test flash messages");
 
 // instantiate a flash messenger 
 $di->setShared('flasher', function (){
-    $flasher = new Joah\Flash\CFlash();
-    // $flasher->setDI($di);
+    $flasher = new \Joah\Flash\CFlash();
     return $flasher;
 });
 
 // instantiate a flash messenger which uses the session
 $di->setShared('sessionFlasher', function () use ($di) {
-    $sessionFlasher = new Joah\Flash\CFlashSession($di);
+    $sessionFlasher = new \Joah\Flash\CFlashSession($di);
     $sessionFlasher->setDI($di);
     return $sessionFlasher;
 });

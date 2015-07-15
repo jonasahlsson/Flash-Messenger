@@ -15,7 +15,7 @@ Install
 To your composer.json add
 >
 >    "require": {
->        "FlashMessenger": "*"
+>       "joah/flash-messenger":"dev-master"
 >    }
 >
 
