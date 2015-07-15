@@ -57,7 +57,7 @@ $app->router->add('', function() use ($app) {
 $app->router->add('flash-redirect', function() use ($app) {
     
     // use flash with session with same syntax
-    $app->sessionFlasher->notice('This text was was passed via the session and survived a redirect!');
+    $app->sessionFlasher->notice('This text was passed via the session and survived a redirect!');
         
     //create url
     $url = $app->url->create('flash-redirect-target');
@@ -68,7 +68,7 @@ $app->router->add('flash-redirect', function() use ($app) {
 // target route of redirect test
 $app->router->add('flash-redirect-target', function() use ($app) {
 
-    $title = "Test flash message sent by the session";
+    $title = "Test flash message sent via the session";
     
     $content = "";
 
