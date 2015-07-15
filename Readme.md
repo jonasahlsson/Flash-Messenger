@@ -10,9 +10,9 @@ Install
 ###Using composer###
 Add the following dependency to your composer.json
 >
->    "require": { 
->       "joah/flash-messenger":"1.0" 
->    } 
+>    "require": {  
+>       "joah/flash-messenger":"1.0"  
+>    }  
 >
 
 ###Files###
@@ -20,8 +20,8 @@ The module is made up of classfiles containing flash message functionality, a st
 and an usage example file. 
 
 *Classfiles* are located is src directory.
->src/CFlash.php
->src/CFlashSession.php
+>src/CFlash.php  
+>src/CFlashSession.php  
 
 *Stylesheet* in webroot/css
 >webroot/css/flash.css
@@ -42,26 +42,26 @@ They all take two arguments, firstly the required message and secondly an option
 
 ###Instantiate###
 Without session
->$di->setShared('flashMessenger', function (){
->    $flashMessenger = new Joah\Flash\CFlash();
->    return $flashMessenger;
->});
+>$di->setShared('flashMessenger', function (){  
+>    $flashMessenger = new Joah\Flash\CFlash();  
+>    return $flashMessenger;  
+>});  
 >
 
 With session support
 > 
-> $di->setShared('sessionFlasher', function () use ($di) { 
->     $sessionFlasher = new Joah\Flash\CFlashSession($di); 
->     $sessionFlasher->setDI($di); 
->     return $sessionFlasher; 
-> });
+> $di->setShared('sessionFlasher', function () use ($di) {  
+>     $sessionFlasher = new Joah\Flash\CFlashSession($di);  
+>     $sessionFlasher->setDI($di);  
+>     return $sessionFlasher;  
+> });  
 
 ###Send message###
-> $app->flashMessenger->success('Hello world!'); 
-> $app->flashMessenger->notice('Hola mundo!'); 
-> $app->flashMessenger->warning('Bonjour monde!'); 
-> $app->flashMessenger->error('Hallo Welt!'); 
-> $app->flashMessenger->message('Hej världen!', 'xx-large-text'); 
+> $app->flashMessenger->success('Hello world!');  
+> $app->flashMessenger->notice('Hola mundo!');  
+> $app->flashMessenger->warning('Bonjour monde!');  
+> $app->flashMessenger->error('Hallo Welt!');  
+> $app->flashMessenger->message('Hej världen!', 'xx-large-text');  
 
 ###Output message###
 Messages can be outputted using the *output()* method or using the return value 
@@ -86,8 +86,8 @@ There is a stylsheet webroot/css/flash.css with predefined styles. The methods
 error(), success(), notice() and warning() all have default html class attributes. 
 The class attributes can be replaced using the optional class argument.
 
-> .flash-error {...} 
-> .flash-success {...} 
-> .flash-notice {...} 
-> .flash-warning {...} 
+> .flash-error {...}  
+> .flash-success {...}  
+> .flash-notice {...}  
+> .flash-warning {...}  
 
