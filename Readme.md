@@ -57,6 +57,8 @@ With session support
 > });  
 
 ###Send message###
+Send messages using any of the methods *error()*, *success()*, *notice()*, *warning()* 
+or *message()*. All methods except message() has default HTML class attribute.  
 > $app->flashMessenger->success('Hello world!');  
 > $app->flashMessenger->notice('Hola mundo!');  
 > $app->flashMessenger->warning('Bonjour monde!');  
@@ -84,7 +86,8 @@ Example using return value:
 ###Style###
 There is a stylsheet webroot/css/flash.css with predefined styles. The methods 
 error(), success(), notice() and warning() all have default html class attributes. 
-The class attributes can be replaced using the optional class argument.
+The class attributes can be replaced using the optional class argument and new CSS
+can be added.
 
 > .flash-error {...}  
 > .flash-success {...}  
