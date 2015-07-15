@@ -3,14 +3,10 @@ Flash Messenger
 
 A flash message module developed for use with Anax-MVC.
 
-* Point your browser to flash-quicktest.php for a first look.
-
-* For further example uses. Copy webroot/flash-test.php and webroot/css/flash.css into Anax-MVC.
-
+* Install and copy webroot/flash-test.php into Anax-MVC/webroot and open i browser to get started.
 
 Install
 -------
-
 ###Using composer###
 To your composer.json add
 >
@@ -21,7 +17,7 @@ To your composer.json add
 
 ###Files###
 The module is made up of classfiles containing flash message functionality, a stylsheet with styles,
-and usage examples. 
+and usage example. 
 
 *Classfiles* are located is src directory.
 >src/CFlash.php
@@ -30,9 +26,8 @@ and usage examples.
 *Stylesheet* in webroot/css
 >webroot/css/flash.css
 
-*Usage examples* to get going quickly is located in webroot directory.
+*Usage example* to get going quickly is located in webroot directory. Copy into Anax-MVC and open i browser to test.
 >webroot/flash-test.php
->webroot/flash-quicktest.php
 
 Usage
 -----
