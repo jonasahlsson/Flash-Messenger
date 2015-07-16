@@ -38,9 +38,6 @@ an example of use integrated with Anax-MVC.
 >webroot/flash-quicktest.php  
 >webroot/flash-test.php  
 
-Usage
------
-
 ###Classes###
 There are two classes, CFlash and the extended CFlashSession. CFlashSession supports 
 sending messages via a session. Use whichever is suitable for your needs.
@@ -49,6 +46,10 @@ sending messages via a session. Use whichever is suitable for your needs.
 Send messages with *message()*, *error()*, *success()*, *notice()* or *warning()*. 
 The methods take two arguments. Firstly the required message and secondly an optional 
 HTML class attribute. 
+
+
+Usage
+-----
 
 ###Instantiate###
 Without session
@@ -84,12 +85,12 @@ Example using output():
 > 
 > $app->flashMessenger->success('message to send');
 > 
-> echo $flashMessenger->output();
+> echo $app->flashMessenger->output();
 > 
 
 Example using return value:
 > 
-> $flashMessage = $flashMessenger->success('message to send');
+> $flashMessage = $app->flashMessenger->success('message to send');
 > 
 > echo $flashMessage;
 > 
