@@ -3,7 +3,7 @@ Flash Messenger
 
 A flash message module developed for use with Anax-MVC.
 
-* Install with composer. 
+* Easy install using composer and packagist. 
 
 * Open webroot/flash-quicktest.php in your browser for a basic example.
 
