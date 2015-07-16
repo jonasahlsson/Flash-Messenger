@@ -25,7 +25,7 @@ $di->setShared('sessionFlasher', function () use ($di) {
 
 $app->router->add('', function() use ($app) {
 
-    $title = "Examples of Flash message use";
+    $title = "Examples of Flash Message use";
 
     $content = "";
     $content .= $app->flasher->success('Hello world!');
@@ -68,7 +68,7 @@ $app->router->add('flash-redirect', function() use ($app) {
 // target route of redirect test
 $app->router->add('flash-redirect-target', function() use ($app) {
 
-    $title = "Test flash message sent via the session";
+    $title = "Flash Message sent via the session";
     
     $content = "";
 

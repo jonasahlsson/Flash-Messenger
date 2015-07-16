@@ -8,7 +8,8 @@ namespace Joah\Flash;
  */
 class CFlashSession extends CFlash implements \Anax\DI\IInjectionAware
 {    
-    
+    use \Anax\DI\TInjectable;
+        
     /**
      * constant used as name for sessionvariable  
      */
@@ -28,7 +29,7 @@ class CFlashSession extends CFlash implements \Anax\DI\IInjectionAware
     public function output()
     {
        if ($this->session->has(self::SESSION_VARIABLE)) {
-            return $this->session->get(self::SESSION_VARIABLE, "not found");
+            return $this->session->get(self::SESSION_VARIABLE);
        }
     }
 

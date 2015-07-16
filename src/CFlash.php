@@ -6,9 +6,8 @@ namespace Joah\Flash;
  * Class for Flashmessages.
  *
  */
-class CFlash implements \Anax\DI\IInjectionAware
-{    
-    use \Anax\DI\TInjectable;
+class CFlash
+{
 
     protected $message; // keeps flash message string
     
@@ -40,7 +39,7 @@ class CFlash implements \Anax\DI\IInjectionAware
     
     
     /**
-    * Error flash message
+        * Error flash message
     * @param string $msg message to flash
     * @param string optional replacementclass to append to message
     * @return string
