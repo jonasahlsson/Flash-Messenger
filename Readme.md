@@ -5,10 +5,10 @@ A flash message module developed for use with Anax-MVC.
 
 * Install with composer. 
 
-* Open webroot/Flash-quicktest.php in your browser for a basic example.
+* Open webroot/flash-quicktest.php in your browser for a basic example.
 
 * Copy webroot/flash-test.php into Anax-MVC/webroot and open in browser to see 
-an example usage taking advantage of Anax-MVCs default config and views.
+an usage example taking advantage of Anax-MVCs default config and views.
 
 Install
 -------
@@ -22,7 +22,7 @@ Add the following dependency to your composer.json and run composer install/upda
 
 ###Files###
 The module is made up of classes containing flash message functionality, a stylsheet,
-and an usage example file. 
+and an usage examples. 
 
 *Classfiles* are located is src directory.
 >src/CFlash.php  
@@ -31,9 +31,12 @@ and an usage example file.
 *Stylesheet* in webroot/css
 >webroot/css/flash.css
 
-The *usage example file* is located in the webroot directory. Copy file into Anax-MVC/webroot
-and open i browser to get started swiftly.
->webroot/flash-test.php
+*Usage examples* flash-quicktest.php and flash-test.php, located in the webroot 
+directory, can be used to get started swiftly. Open flash-quicktest.php in browser 
+for a quick look at what to expect. Copy flash-test.php into Anax-MVC/webroot for 
+an example of use integrated with Anax-MVC.
+>webroot/flash-quicktest.php  
+>webroot/flash-test.php  
 
 Usage
 -----

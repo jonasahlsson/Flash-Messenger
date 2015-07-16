@@ -4,7 +4,7 @@
 require __DIR__.'/config_with_app.php'; 
 
 // load stylesheet
-$app->theme->addStylesheet('css/flash.css');
+$app->theme->addStylesheet('../vendor/joah/flash-messenger/webroot/css/flash.css');
 
 // Set page title
 $app->theme->setTitle("Test flash messages");
@@ -56,7 +56,7 @@ $app->router->add('', function() use ($app) {
 // redirect
 $app->router->add('flash-redirect', function() use ($app) {
     
-    // use flash with session with same syntax
+    // use flash with session
     $app->sessionFlasher->notice('This text was passed via the session and survived a redirect!');
         
     //create url
