@@ -39,7 +39,7 @@ class CFlash
     
     
     /**
-        * Error flash message
+    * Error flash message
     * @param string $msg message to flash
     * @param string optional replacementclass to append to message
     * @return string
