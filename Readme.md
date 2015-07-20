@@ -1,6 +1,10 @@
 Flash Messenger
 ==============
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/jonasahlsson/Flash-Messenger/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/jonasahlsson/Flash-Messenger/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/jonasahlsson/Flash-Messenger/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/jonasahlsson/Flash-Messenger/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/jonasahlsson/Flash-Messenger/badges/build.png?b=master)](https://scrutinizer-ci.com/g/jonasahlsson/Flash-Messenger/build-status/master)
+
 A flash message module developed for use with Anax-MVC.
 
 * Easy install using composer and packagist. 
