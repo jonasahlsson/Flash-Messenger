@@ -1,7 +1,7 @@
 <?php
 
 // load config
-require __DIR__.'/config_with_app.php'; 
+require __DIR__ . '/config_with_app.php'; 
 
 // load stylesheet
 $app->theme->addStylesheet('../vendor/joah/flash-messenger/webroot/css/flash.css');
@@ -10,13 +10,13 @@ $app->theme->addStylesheet('../vendor/joah/flash-messenger/webroot/css/flash.css
 $app->theme->setTitle("Test flash messages");
 
 // instantiate a flash messenger 
-$di->setShared('flasher', function (){
+$di->setShared('flasher', function() {
     $flasher = new \Joah\Flash\CFlash();
     return $flasher;
 });
 
 // instantiate a flash messenger which uses the session
-$di->setShared('sessionFlasher', function () use ($di) {
+$di->setShared('sessionFlasher', function() use ($di) {
     $sessionFlasher = new \Joah\Flash\CFlashSession($di);
     $sessionFlasher->setDI($di);
     return $sessionFlasher;
