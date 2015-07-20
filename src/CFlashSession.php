@@ -7,7 +7,7 @@ namespace Joah\Flash;
  *
  */
 class CFlashSession extends CFlash implements \Anax\DI\IInjectionAware
-{    
+{
     use \Anax\DI\TInjectable;
         
     /**

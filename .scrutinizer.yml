@@ -1,0 +1,11 @@
+imports:
+    - php
+    
+filter:
+    excluded_paths: 
+        - test/*
+        - autoloader.php
+
+tools:
+    external_code_coverage: true
+    

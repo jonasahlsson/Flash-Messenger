@@ -103,11 +103,11 @@ class CFlash
 
     /**
     * saving to message property
-    * @param string $string string to save
+    * @param string $msg string to save
     */
     protected function save($msg)
     {
-        // concatenate string with existing messages
+        // concatenate msg with existing messages
         $this->message .= $msg;
     }
 }
