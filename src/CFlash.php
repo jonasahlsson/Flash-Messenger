@@ -13,17 +13,17 @@ class CFlash
     
     
     /**
-    * Contructor for flash message
-    * 
-    */
+     * Contructor for flash message
+     * 
+     */
     public function __construct()
     {
     }
 
     /**
-    * flash message (without default class)
-    * @param string $msg message to flash
-    */
+     * flash message (without default class)
+     * @param string $msg message to flash
+     */
     public function message($msg, $class = null)
     {
         // combine msg and class into html
@@ -39,11 +39,11 @@ class CFlash
     
     
     /**
-    * Error flash message
-    * @param string $msg message to flash
-    * @param string optional replacementclass to append to message
-    * @return string
-    */
+     * Error flash message
+     * @param string $msg message to flash
+     * @param string optional replacementclass to append to message
+     * @return string
+     */
     public function error($msg, $class = "flash-error")
     {        
         // pass parameters on to message method
@@ -53,11 +53,11 @@ class CFlash
     }
 
     /**
-    * Success flash message
-    * @param string $msg message to flash
-    * @param string optional replacementclass to append to message
-    * @return string
-    */
+     * Success flash message
+     * @param string $msg message to flash
+     * @param string optional replacementclass to append to message
+     * @return string
+     */
     public function success($msg, $class = "flash-success")
     {
         // pass parameters on to message method
@@ -68,9 +68,9 @@ class CFlash
 
 
     /**
-    * notice flash message
-    * @param string $msg message to flash
-    */
+     * notice flash message
+     * @param string $msg message to flash
+     */
     public function notice($msg, $class = "flash-notice")
     {
         // pass parameters on to message method
@@ -81,9 +81,9 @@ class CFlash
 
 
     /**
-    * warning flash message
-    * @param string $msg message to flash
-    */
+     * warning flash message
+     * @param string $msg message to flash
+     */
     public function warning($msg, $class = "flash-warning")
     {
         // pass parameters on to message method
@@ -94,17 +94,17 @@ class CFlash
 
 
     /**
-    * output flash message
-    */
+     * output flash message
+     */
     public function output()
     {
         return $this->message;
     }
 
     /**
-    * saving to message property
-    * @param string $msg string to save
-    */
+     * saving to message property
+     * @param string $msg string to save
+     */
     protected function save($msg)
     {
         // concatenate msg with existing messages

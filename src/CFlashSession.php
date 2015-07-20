@@ -16,27 +16,27 @@ class CFlashSession extends CFlash implements \Anax\DI\IInjectionAware
     const SESSION_VARIABLE = 'flashmessage';
 
     /**
-    * flush message variable from session
-    */
+     * flush message variable from session
+     */
     public function flush()
     {
         $this->session->set(self::SESSION_VARIABLE, null);
     }
     
     /**
-    * output flash message from session
-    */
+     * output flash message from session
+     */
     public function output()
     {
-       if ($this->session->has(self::SESSION_VARIABLE)) {
+        if ($this->session->has(self::SESSION_VARIABLE)) {
             return $this->session->get(self::SESSION_VARIABLE);
-       }
+        }
     }
 
     /**
-    * saving message to session
-    * @param string $msg message to save
-    */
+     * saving message to session
+     * @param string $msg message to save
+     */
     protected function save($msg)
     {
         // append not overwrite
