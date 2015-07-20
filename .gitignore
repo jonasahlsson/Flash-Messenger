@@ -1,1 +1,4 @@
 \report
+\vendor
+\coverage
+coverage.clover
