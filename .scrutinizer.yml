@@ -4,6 +4,7 @@ imports:
 filter:
     excluded_paths: 
         - test/*
+        - vendor/*
         - autoloader.php
 
 tools:

@@ -17,7 +17,7 @@ $di->setShared('flasher', function() {
 
 // instantiate a flash messenger which uses the session
 $di->setShared('sessionFlasher', function() use ($di) {
-    $sessionFlasher = new \Joah\Flash\CFlashSession($di);
+    $sessionFlasher = new \Joah\Flash\CFlashSession();
     $sessionFlasher->setDI($di);
     return $sessionFlasher;
 });

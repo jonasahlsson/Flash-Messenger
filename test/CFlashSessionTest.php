@@ -4,16 +4,17 @@ namespace Joah\Flash;
 
 class CFlashSessionTest extends \PHPUnit_Framework_TestCase
 {
+    private $flasher;
+    
     /**
-     *  Test
-     *  
-     *  @return void
+     *  Setup
      */
-    public function testMessageSession() 
+    public function setUp()
     {
-        $flasher = new \Joah\Flash\CFlashSession();
+        //instantiate a flasher and inject di
+        $this->flasher = new \Joah\Flash\CFlashSession();
         $di    = new \Anax\DI\CDIFactoryDefault();
-        $flasher->setDI($di);
+        $this->flasher->setDI($di);
         
         $di->setShared('session', function () {
         $session = new \Anax\Session\CSession();
@@ -21,12 +22,20 @@ class CFlashSessionTest extends \PHPUnit_Framework_TestCase
         $session->name();
         //$session->start();
         return $session;
-    });
-        
+        });
+    }
+
+    /**
+     *  Test
+     *  
+     *  @return void
+     */
+    public function testMessageSession() 
+    {
         $msg = "test message";
         $class = "custom-class";
         
-        $flash = $flasher->message($msg, $class);
+        $flash = $this->flasher->message($msg, $class);
         
         $html = "<div class='" . $class . "'>" . $msg . "</div>";
         
@@ -34,8 +43,72 @@ class CFlashSessionTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($flash, $html, "Flash message not returned or formatted as expected by return syntax"); 
         
         // test output syntax
-        $output = $flasher->output();
+        $output = $this->flasher->output();
         $this->assertEquals($flash, $html, "Flash message not returned or formatted as expected by output message"); 
+    }
+    
+    /**
+     *  Test
+     *  
+     *  @return void
+     *  
+     */
+    public function testMessageTypes()
+    {
+
+        //error
+        $msg = "test message";
+        $class = "custom-class";
+        
+        $flash = $this->flasher->error($msg, $class); 
+        
+        $html = "<div class='" . $class . "'>" . $msg . "</div>";
+        $this->assertEquals($flash, $html, "Error method did not output correctly formatted flash message");      
+
+        //success
+        $msg = "test message";
+        $class = "custom-class";
+        
+        $flash = $this->flasher->success($msg, $class); 
+        
+        $html = "<div class='" . $class . "'>" . $msg . "</div>";
+
+        $this->assertEquals($flash, $html, "Success method did not output correctly formatted flash message"); 
+     
+        //notice
+        $msg = "test message";
+        $class = null;
+        
+        $flash = $this->flasher->notice($msg, $class); 
+        
+        $html = "<div class='" . $class . "'>" . $msg . "</div>";
+        $this->assertEquals($flash, $html, "Notice method did not output correctly formatted flash message");      
+
+        //warning
+        $msg = "test message";
+        $class = null;
+        
+        $flash = $this->flasher->warning($msg, $class); 
+        
+        $html = "<div class='" . $class . "'>" . $msg . "</div>";
+
+        $this->assertEquals($flash, $html, "Warning method did not output correctly formatted flash message"); 
+    
+    }
+    
+    
+    /**
+     *  Test flush
+     *  
+     *  @return void
+     */
+    public function testFlush()
+    {
+        $this->flasher->message('This message shall not reach the output');
+        
+        $this->flasher->flush();
+        $output = $this->flasher->output();
+        $this->assertEquals($output, null, "Flush didn't do it's job."); 
     }
 
 }

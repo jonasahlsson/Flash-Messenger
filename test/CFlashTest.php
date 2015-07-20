@@ -4,6 +4,7 @@ namespace Joah\Flash;
 
 class CFlashTest extends \PHPUnit_Framework_TestCase
 {
+
     /**
      *  Test
      *  
@@ -37,7 +38,7 @@ class CFlashTest extends \PHPUnit_Framework_TestCase
      */
     public function testMessageTypes()
     {
-    $flasher = new \Joah\Flash\CFlash();
+        $flasher = new \Joah\Flash\CFlash();
 
         //error
         $msg = "test message";
@@ -56,8 +57,7 @@ class CFlashTest extends \PHPUnit_Framework_TestCase
         
         $html = "<div class='" . $class . "'>" . $msg . "</div>";
 
-        $output = $flasher->output();
-        $this->assertEquals($flash, $html, "Flash message not returned or formatted as expected by output message"); 
+        $this->assertEquals($flash, $html, "Success method did not output correctly formatted flash message"); 
      
         //notice
         $msg = "test message";
@@ -66,7 +66,7 @@ class CFlashTest extends \PHPUnit_Framework_TestCase
         $flash = $flasher->notice($msg, $class); 
         
         $html = "<div class='" . $class . "'>" . $msg . "</div>";
-        $this->assertEquals($flash, $html, "Error method did not output correctly formatted flash message");      
+        $this->assertEquals($flash, $html, "Notice method did not output correctly formatted flash message");      
 
         //warning
         $msg = "test message";
@@ -76,9 +76,7 @@ class CFlashTest extends \PHPUnit_Framework_TestCase
         
         $html = "<div class='" . $class . "'>" . $msg . "</div>";
 
-        $output = $flasher->output();
-        $this->assertEquals($flash, $html, "Flash message not returned or formatted as expected by output message"); 
+        $this->assertEquals($flash, $html, "Warning method did not output correctly formatted flash message"); 
     }
-    
     
 }
