@@ -79,4 +79,24 @@ class CFlashTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($flash, $html, "Warning method did not output correctly formatted flash message"); 
     }
     
+        
+    /**
+     *  Test output
+     *  
+     *  @return void
+     */
+    public function testOutput()
+    {
+        $flasher = new \Joah\Flash\CFlash();
+        
+        $msg = "test message";
+        $class = "custom-class";
+        
+        $flasher->message($msg, $class);
+        
+        $html = "<div class='" . $class . "'>" . $msg . "</div>";
+        
+        $output = $flasher->output();
+        $this->assertEquals($output, $html, "Output didn't output the expected output string."); 
+    }
 }

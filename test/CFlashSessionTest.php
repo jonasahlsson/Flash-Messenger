@@ -111,4 +111,24 @@ class CFlashSessionTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals($output, null, "Flush didn't do it's job."); 
     }
 
+    /**
+     *  Test output
+     *  
+     *  @return void
+     */
+    public function testOutput()
+    {
+        $flasher = new \Joah\Flash\CFlash();
+        
+        $msg = "test message";
+        $class = "custom-class";
+        
+        $flasher->message($msg, $class);
+        
+        $html = "<div class='" . $class . "'>" . $msg . "</div>";
+        
+        $output = $flasher->output();
+        $this->assertEquals($output, $html, "Output didn't output the expected output string."); 
+    }
+
 }
