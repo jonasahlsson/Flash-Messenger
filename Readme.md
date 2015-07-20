@@ -20,7 +20,7 @@ Install
 Add the following dependency to your composer.json and run composer install/update.
 >
 >    "require": {  
->       "joah/flash-messenger":"1.0"  
+>       "joah/flash-messenger":"2.0"  
 >    }  
 >
 
